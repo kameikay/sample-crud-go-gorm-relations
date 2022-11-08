@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  gorm_mysql:
+    image: mysql:5.7
+    container_name: gorm_mysql
+    restart: always
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gormdb
+      MYSQL_PASSWORD: root
+    ports:
+      - 3306:3306
